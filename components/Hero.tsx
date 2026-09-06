@@ -90,7 +90,7 @@ export default function Hero() {
             href="/hotel-path"
             className="inline-flex items-center justify-center rounded-2xl bg-brand-teal px-7 py-3.5 text-base font-semibold text-brand-cream shadow-lift transition-colors hover:bg-brand-tealLight"
           >
-            I&apos;m a Hotel / Host
+            I&apos;m a Resort / Host
           </Link>
           <Link
             href="/creator-path"

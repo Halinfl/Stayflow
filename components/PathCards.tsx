@@ -9,7 +9,7 @@ import SafeImage from "@/components/SafeImage";
 const paths = [
   {
     key: "hotel",
-    title: "I'm a Hotel, Host, or Golf Resort",
+    title: "I'm a Resort, Hotel, Destination, or Host",
     desc: "Match with vetted creators who showcase your property and drive direct bookings.",
     href: "/hotel-path",
     image: "/images/paths/hotel.jpg",
