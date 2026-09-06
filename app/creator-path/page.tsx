@@ -47,7 +47,7 @@ export default function CreatorPathPage() {
           </div>
           <div className="text-center">
             <h1 className="text-base font-extrabold tracking-tight text-brand-charcoal sm:text-lg">
-              Stay Shop · Complimentary stays
+              StayForum – Marketplace Opportunities
             </h1>
           </div>
           <div className="w-16 sm:w-24" />
