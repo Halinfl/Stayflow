@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StayFlow — Bookings you own. Stays that inspire.",
+  title: "Bookings you own. Stays that inspire.",
   description:
     "Where hotels and creators match for inspired stays, owned bookings, and shared growth.",
 };
