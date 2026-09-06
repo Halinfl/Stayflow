@@ -34,7 +34,7 @@ export default function Hero() {
         >
           <SafeImage
             src="/images/hero/creator.jpg"
-            alt="Creator shooting content on location"
+            alt="Guest at a resort poolside cabana"
             fill
             priority
             sizes="50vw"
