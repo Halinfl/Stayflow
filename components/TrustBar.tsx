@@ -30,7 +30,7 @@ export default function TrustBar() {
             return (
               <div key={stat.label} className="flex items-center gap-2.5">
                 <Icon size={18} className="text-brand-teal" />
-                <span className="text-sm font-medium text-brand-charcoal/80">{stat.label}</span>
+                <span className="text-sm font-medium text-brand-charcoal">{stat.label}</span>
               </div>
             );
           })}
