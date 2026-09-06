@@ -33,7 +33,7 @@ export function TcsBadge({
       </div>
       <div className="leading-tight">
         <div className="text-sm font-bold text-white">TCS Score</div>
-        <div className="text-xs text-white/50">Travel Commerce</div>
+        <div className="text-xs text-white/50">Illustrative · Travel Commerce</div>
       </div>
     </div>
   );

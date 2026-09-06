@@ -40,7 +40,7 @@ export default function HowItWorks() {
             Match → Stay → Earn
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-brand-muted">
-            A simple loop built for hoteliers and creators who want outcomes, not fluff.
+            Not barter-only. Not pay-for-posts-only. Match, stay, and tracked bookings.
           </p>
         </motion.div>
 

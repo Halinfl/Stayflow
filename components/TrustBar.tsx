@@ -8,7 +8,7 @@ const stats = [
   { icon: BadgeCheck, label: "Vetted properties only" },
   { icon: Percent, label: "Real, tracked commissions" },
   { icon: Users, label: "Growing creator network" },
-  { icon: Handshake, label: "No hidden fees. Ever." },
+  { icon: Handshake, label: "No fees to get matched." },
 ];
 
 export default function TrustBar() {

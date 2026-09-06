@@ -56,8 +56,9 @@ export default function CampaignCard({ campaign, onOpen }: CampaignCardProps) {
           </span>
         </div>
         <p className="mt-2 text-base font-extrabold text-brand-teal">
-          Free stay · {campaign.compNights} nights + {campaign.commission}%
+          Complimentary stay · {campaign.compNights} nights
         </p>
+        <p className="mt-0.5 text-xs text-brand-muted">Tracked commission on bookings you drive</p>
         <p className="mt-1 text-xs text-brand-muted">{campaign.deliverables}</p>
         <button
           onClick={(event) => {

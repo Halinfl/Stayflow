@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { BadgeCheck, Camera, MapPin, Moon, Percent, Star, X } from "lucide-react";
+import { BadgeCheck, Camera, MapPin, Moon, Star, X } from "lucide-react";
 import type { HotelCampaign } from "@/lib/data";
 import SafeImage from "@/components/SafeImage";
 
@@ -43,9 +43,9 @@ export default function CampaignDetailModal({ campaign, onClose, onApply }: Camp
             <div className="space-y-5 p-6">
               <div className="rounded-2xl bg-brand-cream p-5">
                 <p className="mb-3 text-xs font-bold uppercase tracking-wide text-brand-muted">The Offer</p>
-                <div className="grid grid-cols-2 gap-4">
-                  <Offer icon={<Moon size={18} className="mt-0.5 shrink-0 text-brand-teal" />} title={`${campaign.compNights} Free Nights`} detail="Complimentary stay" />
-                  <Offer icon={<Percent size={18} className="mt-0.5 shrink-0 text-brand-teal" />} title={`${campaign.commission}% Commission`} detail="On tracked bookings" />
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <Offer icon={<Moon size={18} className="mt-0.5 shrink-0 text-brand-teal" />} title={`Complimentary stay · ${campaign.compNights} nights`} detail="Agreed nights for the collaboration" />
+                  <Offer icon={<BadgeCheck size={18} className="mt-0.5 shrink-0 text-brand-teal" />} title="Tracked commission" detail="On bookings you drive" />
                 </div>
               </div>
               <div>

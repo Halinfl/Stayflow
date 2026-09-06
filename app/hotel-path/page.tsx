@@ -23,11 +23,16 @@ export default function HotelPathPage() {
             <h1 className="text-base font-extrabold tracking-tight text-brand-charcoal sm:text-lg">
               Find your perfect creator match
             </h1>
-            <p className="text-xs text-brand-muted">Swipe right to match, up for details</p>
+            <p className="text-xs text-brand-muted">Same comps you already give — now with tracked direct bookings.</p>
           </div>
           <div className="w-16 sm:w-24" />
         </div>
       </header>
+
+      <div className="mx-auto max-w-6xl px-6 pt-4 text-center">
+        <p className="text-sm text-brand-muted">Match creators to soft nights.</p>
+        <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-brand-muted">Sample creators &amp; properties for demo</p>
+      </div>
 
       <SwipeDeck />
     </main>
