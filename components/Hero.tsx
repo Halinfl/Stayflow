@@ -34,7 +34,7 @@ export default function Hero() {
         >
           <SafeImage
             src="/images/hero/creator.jpg"
-            alt="Creator at a resort"
+            alt="Creator shooting content on location"
             fill
             priority
             sizes="50vw"
@@ -70,9 +70,9 @@ export default function Hero() {
           variants={fadeInUp}
           className="text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-7xl"
         >
-          Free stays.
+          Bookings you own.
           <br />
-          Real commissions.
+          Stays that inspire the story.
         </motion.h1>
 
         <motion.p

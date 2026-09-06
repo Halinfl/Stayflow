@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StayFlow — Free Stays. Real Commissions.",
+  title: "StayFlow — Bookings you own. Stays that inspire.",
   description:
-    "The first platform where hotels and creators match, stay, and earn together.",
+    "Where hotels and creators match for inspired stays, owned bookings, and shared growth.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
