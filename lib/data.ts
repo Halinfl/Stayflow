@@ -80,9 +80,10 @@ function faqSet(
   deliverables: string,
   type: string,
 ): StayFaq[] {
+  const nameWithArticle = /^the\s/i.test(name) ? name : `the ${name}`;
   return [
     {
-      question: `What does the ${name} StayPackage include?`,
+      question: `What does ${nameWithArticle} StayPackage include?`,
       answer: `A complimentary stay of ${nights} nights for the agreed collaboration, plus tracked commission on bookings you drive. Deliverables: ${deliverables}.`,
     },
     {
