@@ -93,7 +93,7 @@ export default function Hero() {
             className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-teal px-7 py-3.5 text-base font-semibold text-brand-cream shadow-lift transition-colors hover:bg-brand-tealLight"
           >
             <Hotel size={20} className="shrink-0 text-brand-cream" aria-hidden />
-            I&apos;m a Resort / Host
+            I&apos;m a Resort / Hotel
           </Link>
           <Link
             href="/creator-path"
