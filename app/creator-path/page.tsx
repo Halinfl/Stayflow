@@ -41,7 +41,7 @@ export default function CreatorPathPage() {
             <Link href="/" className="flex items-center gap-2 text-brand-muted transition-colors hover:text-brand-charcoal"><ArrowLeft size={20} /><span className="text-sm font-medium">Back</span></Link>
             <span className="hidden text-sm font-extrabold tracking-[0.15em] text-brand-teal uppercase sm:inline">StayFlow</span>
           </div>
-          <div className="text-center"><h1 className="text-base font-extrabold tracking-tight text-brand-charcoal sm:text-lg">Free stays. Real commissions.</h1></div>
+          <div className="text-center"><h1 className="text-base font-extrabold tracking-tight text-brand-charcoal sm:text-lg">Stay Shop · Complimentary stays</h1></div>
           <div className="w-16 sm:w-24" />
         </div>
       </header>
@@ -56,13 +56,14 @@ export default function CreatorPathPage() {
             <span className="flex items-center gap-1.5 text-xs font-medium text-brand-charcoal/70"><ShieldCheck size={14} className="text-brand-teal" /> Verified Properties</span>
             <span className="flex items-center gap-1.5 text-xs font-medium text-brand-charcoal/70"><Percent size={14} className="text-brand-teal" /> Real Commissions</span>
             <span className="flex items-center gap-1.5 text-xs font-medium text-brand-charcoal/70"><BadgeCheck size={14} className="text-brand-teal" /> No fees to get matched</span>
+            <Link href="/trust" className="flex items-center gap-1.5 text-xs font-semibold text-brand-teal hover:underline">How verification works</Link>
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-6xl px-6 pt-6"><FilterChips active={filter} onChange={(value) => { setFilter(value); setVisibleCount(INITIAL_COUNT); }} /></div>
       <div className="mx-auto max-w-6xl px-6 pt-4">
-        <p className="mb-4 text-center text-xs font-semibold uppercase tracking-wide text-brand-muted">Sample creators &amp; properties for demo</p>
+        <p className="mb-4 text-center text-xs font-semibold uppercase tracking-wide text-brand-muted">Sample Stay Shops for demo · pilot verification</p>
       </div>
       <div className="mx-auto max-w-6xl px-6 py-6">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">{visible.map((campaign) => <CampaignCard key={campaign.id} campaign={campaign} onOpen={() => handleCardOpen(campaign)} />)}</div>

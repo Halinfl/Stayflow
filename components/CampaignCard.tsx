@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Star } from "lucide-react";
+import { Link2, MapPin, Star } from "lucide-react";
 import type { HotelCampaign } from "@/lib/data";
 import SafeImage from "@/components/SafeImage";
 import { VerifiedBadge } from "@/components/badges";
@@ -32,10 +32,13 @@ export default function CampaignCard({ campaign, onOpen }: CampaignCardProps) {
         />
         <div className="absolute inset-0 flex items-center justify-center bg-brand-charcoal/0 transition-colors duration-300 group-hover:bg-brand-charcoal/30">
           <span className="translate-y-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-charcoal opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-            View Details
+            View Stay Shop
           </span>
         </div>
-        <div className="absolute left-3 top-3 flex gap-2">
+        <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+          <span className="rounded-full bg-brand-teal px-3 py-1 text-xs font-bold text-white backdrop-blur">
+            Stay Shop
+          </span>
           <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-brand-charcoal backdrop-blur">
             {campaign.type}
           </span>
@@ -55,11 +58,30 @@ export default function CampaignCard({ campaign, onOpen }: CampaignCardProps) {
             <Star size={14} className="text-brand-gold" fill="currentColor" /> {campaign.rating}
           </span>
         </div>
+
         <p className="mt-2 text-base font-extrabold text-brand-teal">
           Complimentary stay · {campaign.compNights} nights
         </p>
         <p className="mt-0.5 text-xs text-brand-muted">Tracked commission on bookings you drive</p>
-        <p className="mt-1 text-xs text-brand-muted">{campaign.deliverables}</p>
+
+        <div className="mt-3 rounded-2xl border border-brand-charcoal/5 bg-brand-cream p-3">
+          <p className="text-[11px] font-bold uppercase tracking-wide text-brand-muted">Why this books</p>
+          <p className="mt-1 text-sm leading-snug text-brand-charcoal">{campaign.creatorAngle}</p>
+        </div>
+
+        <div className="mt-3 rounded-2xl bg-white p-3 shadow-soft">
+          <div className="flex items-start gap-2">
+            <Link2 size={14} className="mt-0.5 shrink-0 text-brand-teal" />
+            <div className="min-w-0">
+              <p className="text-xs font-bold text-brand-charcoal">Your tracked link</p>
+              <p className="mt-0.5 truncate font-mono text-[11px] text-brand-teal">{campaign.attributionPreview}</p>
+              <p className="mt-1 text-[11px] text-brand-muted">Travelers book → you earn</p>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-2 text-xs text-brand-muted">{campaign.deliverables}</p>
+
         <button
           onClick={(event) => {
             event.stopPropagation();
@@ -67,7 +89,7 @@ export default function CampaignCard({ campaign, onOpen }: CampaignCardProps) {
           }}
           className="mt-3 w-full rounded-xl bg-brand-cream py-2.5 text-sm font-semibold text-brand-charcoal transition-colors hover:bg-brand-teal hover:text-brand-cream"
         >
-          Apply
+          Activate stay
         </button>
       </div>
     </motion.div>
