@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Hotel } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 import SafeImage from "@/components/SafeImage";
 
@@ -90,8 +90,9 @@ export default function Hero() {
         >
           <Link
             href="/hotel-path"
-            className="inline-flex items-center justify-center rounded-2xl bg-brand-teal px-7 py-3.5 text-base font-semibold text-brand-cream shadow-lift transition-colors hover:bg-brand-tealLight"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-teal px-7 py-3.5 text-base font-semibold text-brand-cream shadow-lift transition-colors hover:bg-brand-tealLight"
           >
+            <Hotel size={20} className="shrink-0 text-brand-cream" aria-hidden />
             I&apos;m a Resort / Host
           </Link>
           <Link

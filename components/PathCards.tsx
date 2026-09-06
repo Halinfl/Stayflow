@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Building2, Camera } from "lucide-react";
+import { ArrowRight, Camera, Hotel } from "lucide-react";
 import { slideUpCard, staggerContainer, viewportOnce } from "@/lib/motion";
 import SafeImage from "@/components/SafeImage";
 
@@ -13,7 +13,7 @@ const paths = [
     desc: "Match with vetted creators who showcase your property and drive direct bookings.",
     href: "/hotel-path",
     image: "/images/paths/hotel.jpg",
-    icon: Building2,
+    icon: Hotel,
     fallbackLabel: "Hotel path",
   },
   {
