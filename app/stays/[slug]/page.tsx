@@ -32,10 +32,10 @@ export async function generateMetadata({ params }: StayPageProps): Promise<Metad
   const { slug } = await params;
   const campaign = getCampaignBySlug(slug);
   if (!campaign) {
-    return { title: "StayPackage not found · StayFlow" };
+    return { title: "StayPackage not found · StayForum" };
   }
   return {
-    title: `${campaign.name} · StayPackage · StayFlow`,
+    title: `${campaign.name} · StayPackage · StayForum`,
     description: campaign.blurb ?? campaign.creatorAngle,
   };
 }
@@ -44,11 +44,11 @@ function buildJsonLd(campaign: HotelCampaign) {
   const description = campaign.blurb ?? campaign.creatorAngle;
   const hotel: Record<string, unknown> = {
     "@type": "Hotel",
-    "@id": `https://stayflow.app/stays/${campaign.slug}#hotel`,
+    "@id": `https://stayforum.com/stays/${campaign.slug}#hotel`,
     name: campaign.name,
     description,
     image: campaign.image,
-    url: `https://stayflow.app/stays/${campaign.slug}`,
+    url: `https://stayforum.com/stays/${campaign.slug}`,
     address: {
       "@type": "PostalAddress",
       ...(campaign.address.streetAddress
@@ -67,13 +67,13 @@ function buildJsonLd(campaign: HotelCampaign) {
 
   const offer: Record<string, unknown> = {
     "@type": "Offer",
-    "@id": `https://stayflow.app/stays/${campaign.slug}#offer`,
+    "@id": `https://stayforum.com/stays/${campaign.slug}#offer`,
     name: `Complimentary stay · ${campaign.compNights} nights`,
     description: `Complimentary stay of ${campaign.compNights} nights with tracked commission on bookings you drive. Deliverables: ${campaign.deliverables}. Sample StayPackage · pilot — rates confirmed on Activate / hotel claim.`,
     category: campaign.type,
-    url: `https://stayflow.app/stays/${campaign.slug}`,
+    url: `https://stayforum.com/stays/${campaign.slug}`,
     availability: "https://schema.org/LimitedAvailability",
-    itemOffered: { "@id": `https://stayflow.app/stays/${campaign.slug}#hotel` },
+    itemOffered: { "@id": `https://stayforum.com/stays/${campaign.slug}#hotel` },
   };
 
   // Never fabricate prices — omit price / priceCurrency when not accurate
@@ -83,7 +83,7 @@ function buildJsonLd(campaign: HotelCampaign) {
 
   const faqPage = {
     "@type": "FAQPage",
-    "@id": `https://stayflow.app/stays/${campaign.slug}#faq`,
+    "@id": `https://stayforum.com/stays/${campaign.slug}#faq`,
     mainEntity: campaign.faq.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -128,7 +128,7 @@ export default async function StayPackagePage({ params }: StayPageProps) {
             <span className="text-sm font-medium">Back</span>
           </Link>
           <span className="text-sm font-extrabold tracking-[0.15em] text-brand-teal uppercase">
-            StayFlow
+            StayForum
           </span>
           <Link
             href="/trust"
@@ -278,7 +278,7 @@ export default async function StayPackagePage({ params }: StayPageProps) {
             href="/trust"
             className="mt-3 inline-flex text-sm font-semibold text-brand-teal underline-offset-2 hover:underline"
           >
-            How StayFlow builds trust
+            How StayForum builds trust
           </Link>
         </footer>
       </div>

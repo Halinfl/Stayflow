@@ -16,7 +16,7 @@ export default function HotelPathPage() {
               <span className="text-sm font-medium">Back</span>
             </Link>
             <span className="hidden text-sm font-extrabold tracking-[0.15em] text-brand-teal uppercase sm:inline">
-              StayFlow
+              StayForum
             </span>
           </div>
           <div className="text-center">

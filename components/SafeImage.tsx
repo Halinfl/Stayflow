@@ -9,7 +9,7 @@ type SafeImageProps = Omit<ImageProps, "onError" | "src"> & {
 };
 
 export default function SafeImage({
-  fallbackLabel = "StayFlow",
+  fallbackLabel = "StayForum",
   className,
   alt,
   src,

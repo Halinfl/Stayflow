@@ -38,7 +38,7 @@ export default function TrustBar() {
         </div>
         <p className="mt-6 text-center text-sm">
           <Link href="/trust" className="font-semibold text-brand-teal underline-offset-2 hover:underline">
-            How StayFlow builds trust
+            How StayForum builds trust
           </Link>
           <span className="text-brand-muted"> · pilot criteria in this demo</span>
         </p>

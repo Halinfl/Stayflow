@@ -8,7 +8,7 @@ import Link from "next/link";
 const VERIFIED_BULLETS = [
   "Property identity confirmed",
   "Offer terms published",
-  "StayFlow can track bookings from creator links",
+  "StayForum can track bookings from creator links",
 ] as const;
 
 const TCS_ROWS = [
@@ -202,7 +202,7 @@ export function TcsBadge({ score, size = "md", lightShell = false }: TcsBadgePro
                 className="mt-3 block text-center text-xs font-semibold text-brand-teal underline-offset-2 hover:underline"
                 onClick={() => setOpen(false)}
               >
-                How StayFlow builds trust
+                How StayForum builds trust
               </Link>
             </motion.div>
           </motion.div>

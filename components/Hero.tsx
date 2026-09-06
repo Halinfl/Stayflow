@@ -56,7 +56,7 @@ export default function Hero() {
           variants={fadeInUp}
           className="mb-5 text-sm font-extrabold tracking-[0.2em] text-brand-gold uppercase"
         >
-          StayFlow
+          StayForum
         </motion.div>
 
         <motion.span

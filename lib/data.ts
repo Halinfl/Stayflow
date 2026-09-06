@@ -89,12 +89,12 @@ function faqSet(
     {
       question: "How does tracked commission work?",
       answer:
-        "You share a StayFlow attribution link. Traveler clicks map back to you. This demo shows the pattern — rates and payouts are confirmed when you Activate or when the hotel claims the listing. No raw commission % is shown in the pilot UI.",
+        "You share a StayForum attribution link. Traveler clicks map back to you. This demo shows the pattern — rates and payouts are confirmed when you Activate or when the hotel claims the listing. No raw commission % is shown in the pilot UI.",
     },
     {
       question: "Is this live hotel inventory?",
       answer:
-        "No. This is sample StayPackage demo inventory for the StayFlow pilot. Properties and tracking are illustrative so creators and hotels can evaluate the flow — not a live booking engine or OTA replacement.",
+        "No. This is sample StayPackage demo inventory for the StayForum pilot. Properties and tracking are illustrative so creators and hotels can evaluate the flow — not a live booking engine or OTA replacement.",
     },
     {
       question: "What content do I need to deliver?",
@@ -124,7 +124,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Course-first storytelling with sunset tee times — golf travelers book the stay they just watched.",
     blurb: "Desert golf resort built for fairway storytelling and multi-night golf trips.",
     sampleContentLabel: "Demo sample · fairway sunrise Reel",
-    attributionPreview: "stayflow.app/go/fairmont-grand/your-handle",
+    attributionPreview: "stayforum.com/go/fairmont-grand/your-handle",
     bookingProofHint: "Pilot tracks clicks to booking pages you share.",
     faq: faqSet("The Fairmont Grand", 3, "3 Reels + 5 Stories", "Golf Resort"),
     address: {
@@ -153,7 +153,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Family beach weeks with kid-friendly pools — parents save the link after the Stories sequence.",
     blurb: "Maui beach resort for family weeks, lagoon mornings, and Stories-driven saves.",
     sampleContentLabel: "Demo sample · lagoon morning Stories",
-    attributionPreview: "stayflow.app/go/azure-bay/your-handle",
+    attributionPreview: "stayforum.com/go/azure-bay/your-handle",
     bookingProofHint: "Demo shows how traveler clicks map back to you.",
     faq: faqSet("Azure Bay Resort", 4, "2 Reels + 4 Stories + 1 Blog", "Beach Resort"),
     address: {
@@ -182,7 +182,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Historic porch + chef's table nights — culinary travelers book the boutique they tasted on camera.",
     blurb: "Charleston boutique with porch evenings and chef-led tasting nights.",
     sampleContentLabel: "Demo sample · courtyard dinner Reel",
-    attributionPreview: "stayflow.app/go/saffron-house/your-handle",
+    attributionPreview: "stayforum.com/go/saffron-house/your-handle",
     faq: faqSet("Saffron House", 2, "1 Reel + 3 Stories", "Boutique Hotel"),
     address: {
       streetAddress: "112 Meeting St",
@@ -210,7 +210,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Skyline suites for city-weekend getaways — your audience books the view they paused on.",
     blurb: "Manhattan skyline suites made for city-weekend Reels and bio-link bookings.",
     sampleContentLabel: "Demo sample · penthouse golden-hour Reel",
-    attributionPreview: "stayflow.app/go/meridian-tower/your-handle",
+    attributionPreview: "stayforum.com/go/meridian-tower/your-handle",
     bookingProofHint: "Tracked link works for Stories stickers and bio links.",
     faq: faqSet("Meridian Tower", 2, "2 Reels + 2 Stories", "Urban Luxury"),
     address: {
@@ -239,7 +239,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Spa mornings and red-rock trails — wellness followers convert when the reset feels real.",
     blurb: "Sedona wellness retreat for spa mornings, trails, and slow-travel audiences.",
     sampleContentLabel: "Demo sample · sunrise yoga Reel",
-    attributionPreview: "stayflow.app/go/verde-wellness/your-handle",
+    attributionPreview: "stayforum.com/go/verde-wellness/your-handle",
     faq: faqSet("Verde Wellness Retreat", 3, "3 Reels + 6 Stories + 1 YouTube", "Wellness Retreat"),
     address: {
       streetAddress: "90 Ridge Trail",
@@ -267,7 +267,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Coastal links with lodge fireplaces — golf pairs book multi-night trips from one strong Reel.",
     blurb: "Pebble Beach coastal links lodge for cliffside holes and fireplace evenings.",
     sampleContentLabel: "Demo sample · cliffside 18th Stories",
-    attributionPreview: "stayflow.app/go/cypress-point/your-handle",
+    attributionPreview: "stayforum.com/go/cypress-point/your-handle",
     bookingProofHint: "Illustrative tracking only in this demo.",
     faq: faqSet("Cypress Point Lodge", 3, "2 Reels + 5 Stories", "Golf Resort"),
     address: {
@@ -296,7 +296,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Keys sunset docks and waterfront cabanas — weekend travelers save the stay from your Stories.",
     blurb: "Key West waterfront resort for dock sunsets and weekend Stories saves.",
     sampleContentLabel: "Demo sample · dock sunset Stories",
-    attributionPreview: "stayflow.app/go/pearl-atoll/your-handle",
+    attributionPreview: "stayforum.com/go/pearl-atoll/your-handle",
     faq: faqSet("The Pearl Atoll", 2, "4 Stories + 1 Reel", "Beach Resort"),
     address: {
       streetAddress: "2401 N Roosevelt Blvd",
@@ -324,7 +324,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Vineyard mornings and tasting rooms — food-and-wine creators drive midweek boutique stays.",
     blurb: "Napa boutique for vineyard mornings, tasting rooms, and midweek culinary stays.",
     sampleContentLabel: "Demo sample · vineyard picnic Reel",
-    attributionPreview: "stayflow.app/go/marigold-vine/your-handle",
+    attributionPreview: "stayforum.com/go/marigold-vine/your-handle",
     bookingProofHint: "Pilot criteria — not a live earnings guarantee.",
     faq: faqSet("Marigold & Vine", 2, "1 Reel + 4 Stories + 1 Blog", "Boutique Hotel"),
     address: {
@@ -353,7 +353,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "River views and rooftop dinners — urban creators turn city weekends into tracked bookings.",
     blurb: "Chicago river-view luxury for rooftop dinners and city-weekend Reels.",
     sampleContentLabel: "Demo sample · rooftop night Reel",
-    attributionPreview: "stayflow.app/go/skyline-metro/your-handle",
+    attributionPreview: "stayforum.com/go/skyline-metro/your-handle",
     faq: faqSet("Skyline Metropolitan", 2, "2 Reels + 2 Stories", "Urban Luxury"),
     address: {
       streetAddress: "301 E North Water St",
@@ -381,7 +381,7 @@ export const hotelCampaigns: HotelCampaign[] = [
       "Mountain soaks and quiet cabins — slow-travel audiences book restorative midweek escapes.",
     blurb: "Aspen hot springs retreat for mountain soaks and restorative midweek escapes.",
     sampleContentLabel: "Demo sample · steam-and-snow Reel",
-    attributionPreview: "stayflow.app/go/stillwater-springs/your-handle",
+    attributionPreview: "stayforum.com/go/stillwater-springs/your-handle",
     bookingProofHint: "Demo honesty: sample property, illustrative tracking.",
     faq: faqSet("Stillwater Hot Springs", 3, "3 Reels + 4 Stories", "Wellness Retreat"),
     address: {

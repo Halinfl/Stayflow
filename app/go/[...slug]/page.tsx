@@ -25,7 +25,7 @@ export default async function GoStubPage({ params, searchParams }: GoPageProps) 
             <span className="text-sm font-medium">Back</span>
           </Link>
           <span className="text-sm font-extrabold tracking-[0.15em] text-brand-teal uppercase">
-            StayFlow
+            StayForum
           </span>
           <div className="w-16" />
         </div>
@@ -37,7 +37,7 @@ export default async function GoStubPage({ params, searchParams }: GoPageProps) 
         </p>
         <h1 className="mt-3 text-3xl font-extrabold text-brand-charcoal">Attribution handoff</h1>
         <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-brand-muted">
-          Full /go interstitial is out of scope for this pilot. Your click was recorded with StayFlow
+          Full /go interstitial is out of scope for this pilot. Your click was recorded with StayForum
           tracked query params — never a naked hotel.com URL.
         </p>
         <div className="mx-auto mt-8 max-w-md rounded-3xl border border-brand-charcoal/5 bg-white p-6 text-left shadow-soft">

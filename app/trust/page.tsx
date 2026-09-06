@@ -4,7 +4,7 @@ import { ArrowLeft, BadgeCheck, ShieldCheck } from "lucide-react";
 const VERIFIED = [
   "Property identity confirmed",
   "Offer terms published",
-  "StayFlow can track bookings from creator links",
+  "StayForum can track bookings from creator links",
 ] as const;
 
 const TCS = [
@@ -23,7 +23,7 @@ export default function TrustPage() {
             <ArrowLeft size={20} />
             <span className="text-sm font-medium">Back</span>
           </Link>
-          <span className="text-sm font-extrabold tracking-[0.15em] text-brand-teal uppercase">StayFlow</span>
+          <span className="text-sm font-extrabold tracking-[0.15em] text-brand-teal uppercase">StayForum</span>
           <div className="w-16" />
         </div>
       </header>
@@ -31,7 +31,7 @@ export default function TrustPage() {
       <div className="mx-auto max-w-3xl px-6 py-10">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand-teal">Trust</p>
         <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-charcoal sm:text-4xl">
-          How StayFlow builds trust
+          How StayForum builds trust
         </h1>
         <p className="mt-3 max-w-2xl text-brand-muted">
           Verification and Travel Commerce Score (TCS) help hotels and creators match with clearer signals.

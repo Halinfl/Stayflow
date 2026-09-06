@@ -65,7 +65,7 @@ export default function StayPackageActions({
             <ExternalLink size={14} />
           </Link>
           <p className="text-center text-[11px] text-brand-muted">
-            Book control uses StayFlow tracked query params — never a naked hotel.com URL.
+            Book control uses StayForum tracked query params — never a naked hotel.com URL.
           </p>
         </div>
       </div>
