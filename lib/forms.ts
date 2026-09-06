@@ -1,7 +1,9 @@
 // Formspree configuration.
-// Replace the placeholder IDs with the values from your Formspree forms.
+// Hardcoded endpoints work on Vercel without env setup; env vars override when set.
 export const HOTEL_FORM_ENDPOINT =
-  "https://formspree.io/f/YOUR_HOTEL_FORM_ID";
+  process.env.NEXT_PUBLIC_FORMSPREE_HOTEL ||
+  "https://formspree.io/f/mgaelbww";
 
 export const CREATOR_FORM_ENDPOINT =
-  "https://formspree.io/f/YOUR_CREATOR_FORM_ID";
+  process.env.NEXT_PUBLIC_FORMSPREE_CREATOR ||
+  "https://formspree.io/f/mwlknjep";
