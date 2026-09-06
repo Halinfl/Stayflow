@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { BadgeCheck, MapPin, Users, X } from "lucide-react";
 import type { Creator } from "@/lib/data";
+import SafeImage from "@/components/SafeImage";
 
 type CreatorProfileModalProps = {
   creator: Creator | null;
@@ -35,8 +36,8 @@ export default function CreatorProfileModal({
             onClick={(event) => event.stopPropagation()}
             className="relative max-h-[90svh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-brand-cream no-scrollbar sm:rounded-3xl"
           >
-            <div className="relative h-72">
-              <img src={creator.image} alt={creator.name} className="h-full w-full object-cover" />
+            <div className="relative h-72 overflow-hidden">
+              <SafeImage src={creator.image} alt={creator.name} fill sizes="512px" className="object-cover" fallbackLabel={creator.niche} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 to-transparent" />
               <button
                 onClick={onClose}

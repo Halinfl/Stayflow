@@ -7,7 +7,7 @@ import { fadeIn, viewportOnce } from "@/lib/motion";
 const stats = [
   { icon: BadgeCheck, label: "Vetted properties only" },
   { icon: Percent, label: "Real, tracked commissions" },
-  { icon: Users, label: "5,000+ creators in network" },
+  { icon: Users, label: "Growing creator network" },
   { icon: Handshake, label: "No hidden fees. Ever." },
 ];
 

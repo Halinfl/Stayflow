@@ -1,5 +1,9 @@
+"use client";
+
 import { Users } from "lucide-react";
 import type { Creator } from "@/lib/data";
+import SafeImage from "@/components/SafeImage";
+import { TcsBadge } from "@/components/badges";
 
 type CreatorCardProps = {
   creator: Creator;
@@ -9,11 +13,14 @@ export default function CreatorCard({ creator }: CreatorCardProps) {
   return (
     <div className="relative h-full w-full select-none overflow-hidden rounded-3xl bg-brand-charcoal shadow-lift">
       <div className="relative h-[70%]">
-        <img
+        <SafeImage
           src={creator.image}
           alt={creator.name}
-          className="h-full w-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 420px"
+          className="object-cover"
           draggable={false}
+          fallbackLabel={creator.niche}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent" />
 
@@ -28,15 +35,7 @@ export default function CreatorCard({ creator }: CreatorCardProps) {
       </div>
 
       <div className="flex h-[30%] items-center justify-between bg-brand-charcoal px-5">
-        <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-gold">
-            <span className="text-lg font-extrabold text-brand-charcoal">{creator.tcs}</span>
-          </div>
-          <div className="leading-tight">
-            <div className="text-sm font-bold text-white">TCS Score</div>
-            <div className="text-xs text-white/50">Travel Commerce</div>
-          </div>
-        </div>
+        <TcsBadge score={creator.tcs} />
 
         <div className="flex gap-6">
           <div className="text-right">

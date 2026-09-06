@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { BadgeCheck, Camera, MapPin, Moon, Percent, Star, X } from "lucide-react";
 import type { HotelCampaign } from "@/lib/data";
+import SafeImage from "@/components/SafeImage";
 
 type CampaignDetailModalProps = {
   campaign: HotelCampaign | null;
@@ -24,13 +25,14 @@ export default function CampaignDetailModal({ campaign, onClose, onApply }: Camp
             onClick={(event) => event.stopPropagation()}
             className="relative max-h-[90svh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-white no-scrollbar sm:rounded-3xl"
           >
-            <div className="relative h-64">
-              <img src={campaign.image} alt={campaign.name} className="h-full w-full object-cover" />
+            <div className="relative h-64 overflow-hidden">
+              <SafeImage src={campaign.image} alt={campaign.name} fill sizes="512px" className="object-cover" fallbackLabel={campaign.type} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 to-transparent" />
               <button onClick={onClose} className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur" aria-label="Close campaign details"><X size={18} /></button>
               <div className="absolute bottom-4 left-5 right-5">
-                <div className="mb-1 flex items-center gap-2 text-sm text-white/90">
+                <div className="mb-1 flex flex-wrap items-center gap-2 text-sm text-white/90">
                   <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold backdrop-blur">{campaign.type}</span>
+                  {campaign.verified && <span className="flex items-center gap-1 rounded-full bg-brand-teal px-2.5 py-0.5 text-xs font-bold text-white"><BadgeCheck size={12} /> Verified</span>}
                   <span className="flex items-center gap-1"><Star size={13} fill="currentColor" className="text-brand-gold" /> {campaign.rating}</span>
                 </div>
                 <h2 className="text-3xl font-extrabold tracking-tight text-white">{campaign.name}</h2>

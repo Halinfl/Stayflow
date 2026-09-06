@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Building2, Camera } from "lucide-react";
 import { slideUpCard, staggerContainer, viewportOnce } from "@/lib/motion";
+import SafeImage from "@/components/SafeImage";
 
 const paths = [
   {
@@ -11,16 +12,18 @@ const paths = [
     title: "I'm a Hotel, Host, or Golf Resort",
     desc: "Match with vetted creators who showcase your property and drive direct bookings.",
     href: "/hotel-path",
-    image: "https://images.unsplash.com/photo-1582719508461-939876d26f1e?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/paths/hotel.jpg",
     icon: Building2,
+    fallbackLabel: "Hotel path",
   },
   {
     key: "creator",
     title: "I'm a Creator or Travel Influencer",
     desc: "Qualify for complimentary stays & earn commission on bookings that convert from your content.",
     href: "/creator-path",
-    image: "https://images.unsplash.com/photo-1544642009-907223768efb?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/paths/creator.jpg",
     icon: Camera,
+    fallbackLabel: "Creator path",
   },
 ];
 
@@ -42,11 +45,14 @@ export default function PathCards() {
                 href={path.href}
                 className="group relative block overflow-hidden rounded-3xl bg-brand-charcoal shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift"
               >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <SafeImage
                     src={path.image}
                     alt={path.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    fallbackLabel={path.fallbackLabel}
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/95 via-brand-charcoal/40 to-transparent" />

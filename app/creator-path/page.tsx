@@ -37,9 +37,12 @@ export default function CreatorPathPage() {
     <main className="min-h-screen bg-white">
       <header className="sticky top-0 z-40 border-b border-brand-charcoal/5 bg-white/90 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link href="/" className="flex items-center gap-2 text-brand-muted transition-colors hover:text-brand-charcoal"><ArrowLeft size={20} /><span className="text-sm font-medium">Back</span></Link>
+          <div className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-2 text-brand-muted transition-colors hover:text-brand-charcoal"><ArrowLeft size={20} /><span className="text-sm font-medium">Back</span></Link>
+            <span className="hidden text-sm font-extrabold tracking-[0.15em] text-brand-teal uppercase sm:inline">StayFlow</span>
+          </div>
           <div className="text-center"><h1 className="text-base font-extrabold tracking-tight text-brand-charcoal sm:text-lg">Free stays. Real commissions.</h1><p className="text-xs text-brand-muted">Browse verified properties offering stays + commission</p></div>
-          <div className="w-16" />
+          <div className="w-16 sm:w-24" />
         </div>
       </header>
 
