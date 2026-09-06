@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-geist-mono);
+  --color-brand-teal: #0D5C63;
+  --color-brand-tealLight: #0F7379;
+  --color-brand-tealDark: #094348;
+  --color-brand-cream: #FFF8F0;
+  --color-brand-creamDark: #F5EBDD;
+  --color-brand-gold: #D4A853;
+  --color-brand-goldLight: #E8C683;
+  --color-brand-charcoal: #1A1A2E;
+  --color-brand-muted: #6B7280;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+  --shadow-soft: 0 4px 20px rgba(26, 26, 46, 0.08);
+  --shadow-lift: 0 12px 40px rgba(26, 26, 46, 0.16);
+  --shadow-card: 0 8px 30px rgba(13, 92, 99, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
