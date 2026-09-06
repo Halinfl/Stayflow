@@ -46,22 +46,24 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-brand-charcoal/30 via-brand-charcoal/50 to-brand-charcoal/90" />
 
+      {/* Top-left chrome wordmark — cream on dark hero, enlarged ~25% */}
+      <div className="absolute inset-x-0 top-0 z-20">
+        <div className="mx-auto flex max-w-6xl items-center px-6 pt-5 sm:pt-6">
+          <span className="text-lg font-black tracking-[0.16em] text-brand-cream uppercase drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:text-xl">
+            StayForum
+          </span>
+        </div>
+      </div>
+
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
         className="relative z-10 flex min-h-[85svh] flex-col items-center justify-center px-6 py-20 text-center"
       >
-        <motion.div
-          variants={fadeInUp}
-          className="mb-5 text-sm font-extrabold tracking-[0.2em] text-brand-gold uppercase"
-        >
-          StayForum
-        </motion.div>
-
         <motion.span
           variants={fadeInUp}
-          className="mb-6 inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur"
+          className="mb-6 inline-block rounded-full bg-white/8 px-3 py-1 text-xs font-medium tracking-wide text-white/70 backdrop-blur"
         >
           Travel Marketplace
         </motion.span>
