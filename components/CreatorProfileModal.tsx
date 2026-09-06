@@ -64,10 +64,12 @@ export default function CreatorProfileModal({
               <p className="leading-relaxed text-brand-charcoal">{creator.bio}</p>
 
               <div className="grid grid-cols-3 gap-3">
-                <Metric value={creator.tcs} label="TCS Score" />
+                <Metric value={creator.tcs} label="TCS · Illustrative" />
                 <Metric value={creator.followers.toLocaleString()} label="Followers" />
                 <Metric value={`${creator.engagement}%`} label="Engagement" />
               </div>
+
+              <p className="text-xs text-brand-muted">Estimates booking-commerce fit, not follower fame. Scores are illustrative in this demo.</p>
 
               <div>
                 <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-brand-charcoal">Audience</h3>
