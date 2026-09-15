@@ -5,7 +5,7 @@ export const HOME_FAQ_ITEMS: StayFaq[] = [
   {
     question: "What is StayForum?",
     answer:
-      "StayForum is a marketplace that matches hotels and creators. Hotels offer stays with clear deliverables. Earn tracked bookings on the property’s own site. StayForum is not an OTA — the hotel remains merchant of record.",
+      "StayForum is a marketplace that matches hotels and creators. Hotels offer stays with clear deliverables. Earn tracked booking on the property’s own site and creators earn commission for driving direct bookings. StayForum is not an OTA — the hotel remains merchant of record.",
   },
   {
     question: "What do hotels get?",
