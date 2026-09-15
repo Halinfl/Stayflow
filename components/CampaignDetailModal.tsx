@@ -3,6 +3,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { BadgeCheck, Camera, Link2, MapPin, Moon, Sparkles, Star, X } from "lucide-react";
 import type { HotelCampaign } from "@/lib/data";
+import { buildGoHref } from "@/lib/go";
+import Link from "next/link";
 import SafeImage from "@/components/SafeImage";
 import { VerifiedBadge } from "@/components/badges";
 
@@ -100,6 +102,15 @@ export default function CampaignDetailModal({ campaign, onClose, onApply }: Camp
               <button onClick={onApply} className="w-full rounded-2xl bg-brand-teal py-4 font-semibold text-brand-cream transition-colors hover:bg-brand-tealLight">
                 Activate stay
               </button>
+              <Link
+                href={buildGoHref({ slug: campaign.slug, campaignId: campaign.id, src: "modal" })}
+                className="mt-3 flex w-full items-center justify-center rounded-2xl border border-brand-charcoal/10 bg-white py-3.5 text-sm font-semibold text-brand-charcoal transition-colors hover:border-brand-teal hover:text-brand-teal"
+              >
+                Continue to book
+              </Link>
+              <p className="mt-2 text-center text-[11px] text-brand-muted">
+                Opens StayForum /go first — never a naked OTA link.
+              </p>
             </div>
           </motion.div>
         </motion.div>

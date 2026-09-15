@@ -5,8 +5,11 @@ import Link from "next/link";
 import { ExternalLink, Link2 } from "lucide-react";
 import CreatorLeadForm from "@/components/forms/CreatorLeadForm";
 import HotelLeadForm from "@/components/forms/HotelLeadForm";
+import { buildGoHref } from "@/lib/go";
 
 type StayPackageActionsProps = {
+  slug: string;
+  campaignId: string;
   attributionPreview: string;
   bookingHref?: string;
   bookingProofHint?: string;
@@ -14,6 +17,8 @@ type StayPackageActionsProps = {
 };
 
 export default function StayPackageActions({
+  slug,
+  campaignId,
   attributionPreview,
   bookingHref,
   bookingProofHint,
@@ -23,7 +28,7 @@ export default function StayPackageActions({
   const [hotelOpen, setHotelOpen] = useState(false);
   const bookHref =
     bookingHref ??
-    `/go/${encodeURIComponent(name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""))}?src=stay-detail`;
+    buildGoHref({ slug, campaignId, src: "stay-detail" });
 
   return (
     <>
@@ -59,13 +64,14 @@ export default function StayPackageActions({
           </button>
           <Link
             href={bookHref}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-brand-charcoal/10 py-3 text-sm font-semibold text-brand-muted transition-colors hover:text-brand-teal"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-brand-charcoal/10 py-3 text-sm font-semibold text-brand-muted transition-colors hover:border-brand-teal hover:text-brand-teal"
           >
-            Book via tracked link (stub)
+            Continue to book
             <ExternalLink size={14} />
           </Link>
           <p className="text-center text-[11px] text-brand-muted">
-            Book control uses StayForum tracked query params — never a naked hotel.com URL.
+            Opens StayForum /go first — never a naked OTA link. {name} booking completes with the
+            property or their seller.
           </p>
         </div>
       </div>

@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import GoMissing from "@/components/go/GoMissing";
 import GoTunnel from "@/components/go/GoTunnel";
-import { resolveGoContext } from "@/lib/go";
+import { buildGoHref, parseGoSearchParams, resolveGoContext } from "@/lib/go";
 
-type GoSlugPageProps = {
-  params: Promise<{ slug: string[] }>;
+type GoQueryPageProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 export async function generateMetadata({
-  params,
   searchParams,
-}: GoSlugPageProps): Promise<Metadata> {
-  const { slug } = await params;
+}: GoQueryPageProps): Promise<Metadata> {
   const query = await searchParams;
-  const resolved = resolveGoContext({ slugParts: slug, searchParams: query });
+  const resolved = resolveGoContext({ searchParams: query });
   if (!resolved) {
     return { title: "Link missing · StayForum", robots: { index: false, follow: false } };
   }
@@ -25,11 +23,27 @@ export async function generateMetadata({
   };
 }
 
-export default async function GoSlugPage({ params, searchParams }: GoSlugPageProps) {
-  const { slug } = await params;
+/**
+ * Query pattern: /go?p=[slug]&c=[creator]&src=[guide|card|share]
+ * Canonicalizes to /go/[token] when p is present so token + query shapes share one tunnel.
+ */
+export default async function GoQueryPage({ searchParams }: GoQueryPageProps) {
   const query = await searchParams;
-  const resolved = resolveGoContext({ slugParts: slug, searchParams: query });
+  const parsed = parseGoSearchParams(query);
 
+  if (parsed.p) {
+    redirect(
+      buildGoHref({
+        slug: parsed.p,
+        creator: parsed.c,
+        src: parsed.src,
+        campaignId: parsed.campaignId,
+        to: parsed.to,
+      }),
+    );
+  }
+
+  const resolved = resolveGoContext({ searchParams: query });
   if (!resolved) {
     return <GoMissing />;
   }

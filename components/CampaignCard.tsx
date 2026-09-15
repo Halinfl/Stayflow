@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Link2, MapPin, Star } from "lucide-react";
 import type { HotelCampaign } from "@/lib/data";
+import { buildGoHref } from "@/lib/go";
 import SafeImage from "@/components/SafeImage";
 import { VerifiedBadge } from "@/components/badges";
 
@@ -13,6 +14,7 @@ type CampaignCardProps = {
 
 export default function CampaignCard({ campaign }: CampaignCardProps) {
   const href = `/stays/${campaign.slug}`;
+  const goHref = buildGoHref({ slug: campaign.slug, campaignId: campaign.id, src: "card" });
 
   return (
     <motion.div
@@ -76,25 +78,37 @@ export default function CampaignCard({ campaign }: CampaignCardProps) {
           <p className="mt-1 text-sm leading-snug text-brand-charcoal">{campaign.creatorAngle}</p>
         </div>
 
-        <div className="mt-3 rounded-2xl bg-white p-3 shadow-soft">
+        <Link
+          href={goHref}
+          className="mt-3 block rounded-2xl bg-white p-3 shadow-soft transition-shadow hover:shadow-lift"
+          aria-label={`Continue to book via StayForum for ${campaign.name}`}
+        >
           <div className="flex items-start gap-2">
             <Link2 size={14} className="mt-0.5 shrink-0 text-brand-teal" />
             <div className="min-w-0">
               <p className="text-xs font-bold text-brand-charcoal">Your tracked link</p>
               <p className="mt-0.5 truncate font-mono text-[11px] text-brand-teal">{campaign.attributionPreview}</p>
-              <p className="mt-1 text-[11px] text-brand-muted">Travelers book → you earn</p>
+              <p className="mt-1 text-[11px] text-brand-muted">Travelers book → you earn · via /go</p>
             </div>
           </div>
-        </div>
+        </Link>
 
         <p className="mt-2 text-xs text-brand-muted">{campaign.deliverables}</p>
 
-        <Link
-          href={href}
-          className="mt-3 block w-full rounded-xl bg-brand-cream py-2.5 text-center text-sm font-semibold text-brand-charcoal transition-colors hover:bg-brand-teal hover:text-brand-cream"
-        >
-          View Stay Shop
-        </Link>
+        <div className="mt-3 flex flex-col gap-2">
+          <Link
+            href={goHref}
+            className="block w-full rounded-xl bg-brand-teal py-2.5 text-center text-sm font-semibold text-brand-cream transition-colors hover:bg-brand-tealLight"
+          >
+            Continue to book
+          </Link>
+          <Link
+            href={href}
+            className="block w-full rounded-xl bg-brand-cream py-2.5 text-center text-sm font-semibold text-brand-charcoal transition-colors hover:bg-brand-teal hover:text-brand-cream"
+          >
+            View Stay Shop
+          </Link>
+        </div>
       </div>
     </motion.div>
   );

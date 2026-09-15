@@ -245,6 +245,8 @@ export default async function StayPackagePage({ params }: StayPageProps) {
         {/* E. Attribution + dual CTAs + book stub */}
         <StayPackageActions
           name={campaign.name}
+          slug={campaign.slug}
+          campaignId={campaign.id}
           attributionPreview={campaign.attributionPreview}
           bookingHref={campaign.bookingHref}
           bookingProofHint={campaign.bookingProofHint}
